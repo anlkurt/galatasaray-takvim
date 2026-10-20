@@ -9,350 +9,424 @@ REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
 UID:2026-2027-galatasaray-corum@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART:20260814T183000Z
 DTEND:20260814T203000Z
 SUMMARY:Galatasaray 2-2 Çorum FK
-DESCRIPTION:Trendyol Süper Lig 1. hafta\nKaynak: TFF
+DESCRIPTION:Trendyol Süper Lig 1. hafta\nKaynak: TFF + ESPN
+LOCATION:RAMS Park
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-erzurum-galatasaray@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART:20260821T183000Z
 DTEND:20260821T203000Z
 SUMMARY:Erzurumspor FK 0-4 Galatasaray
-DESCRIPTION:Trendyol Süper Lig 2. hafta\nKaynak: TFF
+DESCRIPTION:Trendyol Süper Lig 2. hafta\nKaynak: TFF + ESPN
+LOCATION:Erzurum Kazim Karabekir
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-galatasaray-goztepe@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART:20260829T183300Z
 DTEND:20260829T203300Z
 SUMMARY:Galatasaray 3-2 Göztepe
-DESCRIPTION:Trendyol Süper Lig 3. hafta\nKaynak: TFF
+DESCRIPTION:Trendyol Süper Lig 3. hafta\nKaynak: TFF + ESPN
+LOCATION:RAMS Park
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-basaksehir-galatasaray@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART:20260904T170000Z
 DTEND:20260904T190000Z
 SUMMARY:Başakşehir 2-3 Galatasaray
-DESCRIPTION:Trendyol Süper Lig 4. hafta\nKaynak: TFF
+DESCRIPTION:Trendyol Süper Lig 4. hafta\nKaynak: TFF + ESPN
+LOCATION:Basaksehir Fatih Terim Stadium
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-galatasaray-kocaelispor@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART:20260913T170000Z
 DTEND:20260913T190000Z
 SUMMARY:Galatasaray 1-0 Kocaelispor
-DESCRIPTION:Trendyol Süper Lig 5. hafta\nKaynak: TFF
+DESCRIPTION:Trendyol Süper Lig 5. hafta\nKaynak: TFF + ESPN
+LOCATION:RAMS Park
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-trabzonspor-galatasaray@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART:20260919T170000Z
 DTEND:20260919T190000Z
 SUMMARY:Trabzonspor 4-0 Galatasaray
-DESCRIPTION:Trendyol Süper Lig 6. hafta\nKaynak: TFF
+DESCRIPTION:Trendyol Süper Lig 6. hafta\nKaynak: TFF + ESPN
+LOCATION:Papara Park
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-galatasaray-kasimpasa@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART:20261009T170000Z
 DTEND:20261009T190000Z
 SUMMARY:Galatasaray 3-1 Kasımpaşa
-DESCRIPTION:Trendyol Süper Lig 7. hafta\nKaynak: TFF
+DESCRIPTION:Trendyol Süper Lig 7. hafta\nKaynak: TFF + ESPN
+LOCATION:RAMS Park
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-genclerbirligi-galatasaray@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART:20261017T130000Z
 DTEND:20261017T150000Z
 SUMMARY:Gençlerbirliği 0-1 Galatasaray
-DESCRIPTION:Trendyol Süper Lig 8. hafta\nKaynak: TFF
+DESCRIPTION:Trendyol Süper Lig 8. hafta\nKaynak: TFF + ESPN
+LOCATION:Eryaman Stadium
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-galatasaray-fenerbahce@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART:20261026T183000Z
 DTEND:20261026T203000Z
 SUMMARY:Galatasaray - Fenerbahçe
-DESCRIPTION:Trendyol Süper Lig 9. hafta\nKaynak: TFF
+DESCRIPTION:Trendyol Süper Lig 9. hafta\nKaynak: TFF + ESPN
+LOCATION:RAMS Park
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Galatasaray - Fenerbahçe 1 saat sonra başlıyor
 TRIGGER:-PT1H
 END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Galatasaray - Fenerbahçe 5 dakika sonra başlıyor
+TRIGGER:-PT5M
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-konyaspor-galatasaray@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART:20261030T170000Z
 DTEND:20261030T190000Z
 SUMMARY:Konyaspor - Galatasaray
-DESCRIPTION:Trendyol Süper Lig 10. hafta\nKaynak: TFF
+DESCRIPTION:Trendyol Süper Lig 10. hafta\nKaynak: TFF + ESPN
+LOCATION:Medas Konya Büyüksehir Stadyumu
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Konyaspor - Galatasaray 1 saat sonra başlıyor
 TRIGGER:-PT1H
 END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Konyaspor - Galatasaray 5 dakika sonra başlıyor
+TRIGGER:-PT5M
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-galatasaray-amed@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART:20261107T160000Z
 DTEND:20261107T180000Z
 SUMMARY:Galatasaray - Amedspor
-DESCRIPTION:Trendyol Süper Lig 11. hafta\nKaynak: TFF
+DESCRIPTION:Trendyol Süper Lig 11. hafta\nKaynak: TFF + ESPN
+LOCATION:RAMS Park
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Galatasaray - Amedspor 1 saat sonra başlıyor
 TRIGGER:-PT1H
 END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Galatasaray - Amedspor 5 dakika sonra başlıyor
+TRIGGER:-PT5M
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-galatasaray-samsunspor@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART:20261121T130000Z
 DTEND:20261121T150000Z
 SUMMARY:Galatasaray - Samsunspor
-DESCRIPTION:Trendyol Süper Lig 12. hafta\nKaynak: TFF
+DESCRIPTION:Trendyol Süper Lig 12. hafta\nKaynak: TFF + ESPN
+LOCATION:RAMS Park
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Galatasaray - Samsunspor 1 saat sonra başlıyor
 TRIGGER:-PT1H
 END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Galatasaray - Samsunspor 5 dakika sonra başlıyor
+TRIGGER:-PT5M
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-besiktas-galatasaray@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART:20261130T180000Z
 DTEND:20261130T200000Z
 SUMMARY:Beşiktaş - Galatasaray
-DESCRIPTION:Trendyol Süper Lig 13. hafta\nKaynak: TFF
+DESCRIPTION:Trendyol Süper Lig 13. hafta\nKaynak: TFF + ESPN
+LOCATION:Vodafone Park
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Beşiktaş - Galatasaray 1 saat sonra başlıyor
 TRIGGER:-PT1H
 END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Beşiktaş - Galatasaray 5 dakika sonra başlıyor
+TRIGGER:-PT5M
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-galatasaray-rizespor@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART:20261204T170000Z
 DTEND:20261204T190000Z
 SUMMARY:Galatasaray - Çaykur Rizespor
-DESCRIPTION:Trendyol Süper Lig 14. hafta\nKaynak: TFF
+DESCRIPTION:Trendyol Süper Lig 14. hafta\nKaynak: TFF + ESPN
+LOCATION:RAMS Park
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Galatasaray - Çaykur Rizespor 1 saat sonra başlıyor
 TRIGGER:-PT1H
 END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Galatasaray - Çaykur Rizespor 5 dakika sonra başlıyor
+TRIGGER:-PT5M
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-eyupspor-galatasaray@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART:20261212T160000Z
 DTEND:20261212T180000Z
 SUMMARY:Eyüpspor - Galatasaray
-DESCRIPTION:Trendyol Süper Lig 15. hafta\nKaynak: TFF
+DESCRIPTION:Trendyol Süper Lig 15. hafta\nKaynak: TFF + ESPN
+LOCATION:Esenyurt Necmi Kadioglu Stadi
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Eyüpspor - Galatasaray 1 saat sonra başlıyor
 TRIGGER:-PT1H
 END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Eyüpspor - Galatasaray 5 dakika sonra başlıyor
+TRIGGER:-PT5M
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-galatasaray-alanyaspor@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART:20261219T160000Z
 DTEND:20261219T180000Z
 SUMMARY:Galatasaray - Alanyaspor
-DESCRIPTION:Trendyol Süper Lig 16. hafta\nKaynak: TFF
+DESCRIPTION:Trendyol Süper Lig 16. hafta\nKaynak: TFF + ESPN
+LOCATION:RAMS Park
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Galatasaray - Alanyaspor 1 saat sonra başlıyor
 TRIGGER:-PT1H
 END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Galatasaray - Alanyaspor 5 dakika sonra başlıyor
+TRIGGER:-PT5M
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-gaziantep-galatasaray@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270117
 DTEND;VALUE=DATE:20270118
 TRANSP:TRANSPARENT
 SUMMARY:Gaziantep FK - Galatasaray (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 17. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:Gaziantep Stadium
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-corum-galatasaray@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270124
 DTEND;VALUE=DATE:20270125
 TRANSP:TRANSPARENT
 SUMMARY:Çorum FK - Galatasaray (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 18. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:Çorum Sehir Stadyumu
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-galatasaray-erzurum@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 TRANSP:TRANSPARENT
 SUMMARY:Galatasaray - Erzurumspor FK (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 19. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:RAMS Park
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-goztepe-galatasaray@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270207
 DTEND;VALUE=DATE:20270208
 TRANSP:TRANSPARENT
 SUMMARY:Göztepe - Galatasaray (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 20. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:Göztepe Gürsel Aksel Stadi
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-galatasaray-basaksehir@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270214
 DTEND;VALUE=DATE:20270215
 TRANSP:TRANSPARENT
 SUMMARY:Galatasaray - Başakşehir (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 21. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:RAMS Park
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-kocaelispor-galatasaray@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270221
 DTEND;VALUE=DATE:20270222
 TRANSP:TRANSPARENT
 SUMMARY:Kocaelispor - Galatasaray (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 22. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:Yildiz Entegre Kocaeli Stadyumu
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-galatasaray-trabzonspor@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
 TRANSP:TRANSPARENT
 SUMMARY:Galatasaray - Trabzonspor (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 23. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:RAMS Park
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-kasimpasa-galatasaray@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270307
 DTEND;VALUE=DATE:20270308
 TRANSP:TRANSPARENT
 SUMMARY:Kasımpaşa - Galatasaray (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 24. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:Recep Tayyip Erdogan Stadium
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-galatasaray-genclerbirligi@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270314
 DTEND;VALUE=DATE:20270315
 TRANSP:TRANSPARENT
 SUMMARY:Galatasaray - Gençlerbirliği (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 25. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:RAMS Park
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-fenerbahce-galatasaray@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270321
 DTEND;VALUE=DATE:20270322
 TRANSP:TRANSPARENT
 SUMMARY:Fenerbahçe - Galatasaray (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 26. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:Şükrü Saracoğlu Stadium
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-galatasaray-konyaspor@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270404
 DTEND;VALUE=DATE:20270405
 TRANSP:TRANSPARENT
 SUMMARY:Galatasaray - Konyaspor (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 27. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:RAMS Park
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-amed-galatasaray@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270411
 DTEND;VALUE=DATE:20270412
 TRANSP:TRANSPARENT
 SUMMARY:Amedspor - Galatasaray (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 28. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:Diyarbakir Stadyumu
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-samsunspor-galatasaray@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270418
 DTEND;VALUE=DATE:20270419
 TRANSP:TRANSPARENT
 SUMMARY:Samsunspor - Galatasaray (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 29. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:Samsun 19 Mayis Stadium
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-galatasaray-besiktas@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270425
 DTEND;VALUE=DATE:20270426
 TRANSP:TRANSPARENT
 SUMMARY:Galatasaray - Beşiktaş (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 30. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:RAMS Park
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-rizespor-galatasaray@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270502
 DTEND;VALUE=DATE:20270503
 TRANSP:TRANSPARENT
 SUMMARY:Çaykur Rizespor - Galatasaray (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 31. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:Estadio Caykur Didi
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-galatasaray-eyupspor@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270509
 DTEND;VALUE=DATE:20270510
 TRANSP:TRANSPARENT
 SUMMARY:Galatasaray - Eyüpspor (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 32. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:RAMS Park
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-alanyaspor-galatasaray@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270516
 DTEND;VALUE=DATE:20270517
 TRANSP:TRANSPARENT
 SUMMARY:Alanyaspor - Galatasaray (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 33. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:Kirbiyik Holding Stadyumu
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-2027-galatasaray-gaziantep@galatasaray-takvim
-DTSTAMP:20261020T072935Z
+DTSTAMP:20261020T074951Z
 DTSTART;VALUE=DATE:20270523
 DTEND;VALUE=DATE:20270524
 TRANSP:TRANSPARENT
 SUMMARY:Galatasaray - Gaziantep FK (saat belli değil)
 DESCRIPTION:Trendyol Süper Lig 34. hafta\nMaç saati henüz açıklanmadı
- \; açıklanınca otomatik güncellenir.\nKaynak: TFF
+ \; açıklanınca otomatik güncellenir.\nKaynak: TFF + ESPN
+LOCATION:RAMS Park
 END:VEVENT
 END:VCALENDAR

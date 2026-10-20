@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Galatasaray'ın Süper Lig maçlarını abone olunabilir bir .ics takvimine dönüştürür.
 
-Ana kaynak TFF'nin resmi haftalık fikstür sayfasıdır (saat değişiklikleri önce burada
-görünür). TFF'ye ulaşılamazsa ESPN'in fikstür verisi yedek olarak kullanılır.
+İki kaynak birlikte kullanılır: TFF'nin resmi haftalık fikstür sayfası ve ESPN'in
+fikstür verisi. Maçlar ev sahibi + deplasman eşleşmesiyle birleştirilir; saat için TFF
+esas alınır, TFF'de saat yoksa ESPN'inki kullanılır. Kaynaklardan biri çalışmazsa
+(ör. TFF sayfasının adresi/yapısı değişirse) takvim diğeriyle üretilmeye devam eder.
 
 Kullanım:
     python3 superlig_takvim.py              # docs/galatasaray.ics üretir
-    python3 superlig_takvim.py --kaynak espn
 
 Sadece Python standart kütüphanesi kullanılır.
 """
@@ -24,7 +25,7 @@ from pathlib import Path
 TAKIM = "galatasaray"
 HAFTA_SAYISI = 34
 MAC_SURESI = timedelta(hours=2)
-HATIRLATMA = "-PT1H"  # maçtan 1 saat önce
+HATIRLATMALAR = [("-PT1H", "1 saat"), ("-PT5M", "5 dakika")]  # maçtan önce
 ISTANBUL = timezone(timedelta(hours=3))  # Türkiye 2016'dan beri sabit UTC+3
 CIKTI = Path(__file__).resolve().parent / "docs" / "galatasaray.ics"
 
@@ -150,8 +151,6 @@ def espn_maclari():
             "stat": comp.get("venue", {}).get("fullName", ""),
             "kaynak": "ESPN",
         })
-    for i, m in enumerate(maclar, 1):  # ESPN hafta bilgisi vermiyor; sıradan çıkar
-        m["hafta"] = i
     return maclar
 
 
@@ -222,16 +221,52 @@ def ics_olustur(maclar, sezon):
         if m["stat"]:
             s.append("LOCATION:" + kacis(m["stat"]))
         if m["baslangic"] and not m["skor"]:
-            s += [
-                "BEGIN:VALARM",
-                "ACTION:DISPLAY",
-                "DESCRIPTION:" + kacis(baslik + " 1 saat sonra başlıyor"),
-                "TRIGGER:" + HATIRLATMA,
-                "END:VALARM",
-            ]
+            for tetik, sure in HATIRLATMALAR:
+                s += [
+                    "BEGIN:VALARM",
+                    "ACTION:DISPLAY",
+                    "DESCRIPTION:" + kacis("{} {} sonra başlıyor".format(baslik, sure)),
+                    "TRIGGER:" + tetik,
+                    "END:VALARM",
+                ]
         s.append("END:VEVENT")
     s.append("END:VCALENDAR")
     return "\r\n".join(katla(x) for x in s) + "\r\n"
+
+
+def birlestir(tff, espn):
+    """İki kaynağı ev sahibi + deplasman eşleşmesiyle birleştirir."""
+    espn_dizin = {(m["ev"], m["deplasman"]): m for m in espn}
+    tff_dizin = {(m["ev"], m["deplasman"]): m for m in tff}
+    sonuc = []
+    for anahtar in set(espn_dizin) | set(tff_dizin):
+        t, e = tff_dizin.get(anahtar), espn_dizin.get(anahtar)
+        if t and e:
+            m = dict(t)
+            if m["baslangic"] is None and e["baslangic"]:
+                m["baslangic"], m["gun"] = e["baslangic"], e["gun"]
+            m["skor"] = m["skor"] or e["skor"]
+            m["stat"] = e["stat"]
+            m["kaynak"] = "TFF + ESPN"
+        else:
+            m = dict(t or e)
+        sonuc.append(m)
+    sonuc.sort(key=lambda m: (m["gun"], m["baslangic"] or datetime.max.replace(tzinfo=timezone.utc)))
+    for i, m in enumerate(sonuc, 1):  # hafta TFF'den gelmediyse sıradan çıkar
+        m["hafta"] = m["hafta"] or i
+    return sonuc
+
+
+def kaynaktan(ad, fonk):
+    try:
+        maclar = fonk()
+    except Exception as e:
+        print("{} kullanılamadı: {}".format(ad, e), file=sys.stderr)
+        return []
+    if len(maclar) < 30:  # sayfa yapısı değiştiyse eksik veriye güvenme
+        print("{} sadece {} maç verdi; kullanılmadı.".format(ad, len(maclar)), file=sys.stderr)
+        return []
+    return maclar
 
 
 def sezon_adi(maclar):
@@ -241,25 +276,18 @@ def sezon_adi(maclar):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("--kaynak", choices=["tff", "espn"], default="tff")
     p.add_argument("--cikti", type=Path, default=CIKTI)
     args = p.parse_args()
 
-    maclar = []
-    if args.kaynak == "tff":
-        try:
-            maclar = tff_maclari()
-        except Exception as e:
-            print("TFF kullanılamadı ({}); ESPN'e geçiliyor.".format(e), file=sys.stderr)
-    if not maclar:
-        maclar = espn_maclari()
-    if len(maclar) < 30:
-        sys.exit("Sadece {} maç bulundu; mevcut takvim korunuyor.".format(len(maclar)))
+    tff, espn = kaynaktan("TFF", tff_maclari), kaynaktan("ESPN", espn_maclari)
+    if not tff and not espn:
+        sys.exit("İki kaynak da kullanılamadı; mevcut takvim korunuyor.")
+    maclar = birlestir(tff, espn)
 
     args.cikti.parent.mkdir(parents=True, exist_ok=True)
     with open(args.cikti, "w", encoding="utf-8", newline="") as f:
         f.write(ics_olustur(maclar, sezon_adi(maclar)))
-    print("{}: {} maç ({})".format(args.cikti, len(maclar), maclar[0]["kaynak"]))
+    print("{}: {} maç (TFF: {}, ESPN: {})".format(args.cikti, len(maclar), len(tff), len(espn)))
 
 
 if __name__ == "__main__":
