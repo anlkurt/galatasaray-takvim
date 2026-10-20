@@ -1,0 +1,34 @@
+name: Takvimi güncelle
+
+on:
+  schedule:
+    - cron: "17 * * * *"    # her saat başı (17. dakikada)
+  workflow_dispatch:         # Actions sekmesinden elle çalıştırma
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  guncelle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: .ics dosyalarını üret
+        run: python3 superlig_takvim.py
+      - name: Değişiklik varsa kaydet
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/*.ics
+          # DTSTAMP her çalıştırmada değişir; sadece maç bilgisi değiştiyse commit at
+          if git diff --cached -U0 | grep '^[+-][A-Z]' | grep -qv '^[+-]DTSTAMP'; then
+            git commit -m "Fikstürü güncelle"
+            git push
+          else
+            echo "Fikstürde değişiklik yok."
+          fi
