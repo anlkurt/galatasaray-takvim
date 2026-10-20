@@ -11,7 +11,7 @@ Her maçtan **1 saat** ve **5 dakika** önce hatırlatma gelir.
 1. Mac'te Takvim → **Dosya → Yeni Takvim Aboneliği…** → adresi yapıştırın → Abone Ol.
 2. Açılan pencerede:
    - **Konum:** iCloud (iPhone ve iPad'de de görünmesi için)
-   - **Kaldır: Uyarılar** kutusunun işaretini **kaldırın** (yoksa hatırlatmalar silinir)
+   - **Sil: Uyarıları** ve **Uyarıları yok say** kutuları **işaretsiz** olmalı (yoksa hatırlatmalar gelmez)
    - **Otomatik yenile:** Her saat
 
 ## Nasıl çalışır?
